@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Linkedin, Mail } from "lucide-react";
+import { ArrowUpRight, Mail } from "lucide-react";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -10,17 +10,17 @@ import { site } from "@/lib/site";
 
 export function Leadership() {
   return (
-    <Section id="leadership" className="relative">
+    <Section id="founder" className="relative">
       <SectionHeader
-        eyebrow={<Badge variant="cyan">Leadership</Badge>}
+        eyebrow={<Badge variant="cyan">Founder</Badge>}
         title={
           <>
-            Founder-led engineering.
+            One person, focused on
             <br />
-            <span className="text-gradient-cyan">Institutional execution.</span>
+            <span className="text-gradient-cyan">doing the work well.</span>
           </>
         }
-        description="RustAI is built by engineers who have spent their careers shipping systems for organizations where reliability, latency, and accountability are non-negotiable."
+        description="Rust AI is founder-led. The person you'll talk to in the first call is the person who'll build your project."
       />
 
       <motion.div
@@ -78,49 +78,25 @@ export function Leadership() {
             </p>
 
             <p className="mt-4 text-[15px] leading-relaxed text-[#94A3B8] max-w-xl">
-              His approach is grounded in long-term systems thinking — privileging
-              reliability, observability, and deterministic behavior over short-term
-              feature velocity. Every product RustAI ships is engineered to operate
-              under the same standards expected of institutional trading infrastructure.
+              The goal of Rust AI is simple: build practical, accessible AI
+              and automation tools for businesses that don't have the time or
+              budget to figure it all out themselves. Honest scope, honest
+              timelines, and software you'll actually use.
             </p>
 
-            <div className="mt-7 grid grid-cols-3 gap-px rounded-xl border border-white/[0.06] bg-white/[0.05] overflow-hidden max-w-xl">
-              <FounderStat label="Years in systems" value="15+" />
-              <FounderStat label="Production deploys" value="2.4k+" />
-              <FounderStat label="Enterprise clients" value="40+" />
-            </div>
-
             <div className="mt-7 flex flex-wrap items-center gap-2">
-              <Button variant="primary" size="md">
-                <Mail className="h-3.5 w-3.5" />
-                Direct outreach
-              </Button>
-              <Button variant="secondary" size="md">
-                <Linkedin className="h-3.5 w-3.5" />
-                LinkedIn
-              </Button>
-              <Button variant="ghost" size="md">
-                Read brief
-                <ArrowUpRight className="h-3.5 w-3.5" />
-              </Button>
+              <a href={site.contact.mailto}>
+                <Button variant="primary" size="md">
+                  <Mail className="h-3.5 w-3.5" />
+                  Direct outreach
+                  <ArrowUpRight className="h-3.5 w-3.5" />
+                </Button>
+              </a>
             </div>
           </div>
         </div>
       </motion.div>
     </Section>
-  );
-}
-
-function FounderStat({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="bg-[#0B1120]/60 backdrop-blur px-4 py-4">
-      <div className="font-display text-xl font-medium text-cyan-300 tabular-nums">
-        {value}
-      </div>
-      <div className="mt-1 font-mono text-[9px] uppercase tracking-[0.22em] text-[#64748B]">
-        {label}
-      </div>
-    </div>
   );
 }
 
@@ -169,13 +145,13 @@ function FounderPortrait() {
             </div>
           </div>
           <div className="mt-6 font-mono text-[10px] uppercase tracking-[0.28em] text-cyan-300">
-            Founder · Profile
+            Founder
           </div>
         </div>
 
         <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
           <div className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#64748B]">
-            ID · 0001
+            Rust AI · 2026
           </div>
           <div className="flex items-center gap-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
@@ -183,24 +159,6 @@ function FounderPortrait() {
               Active
             </span>
           </div>
-        </div>
-
-        <div className="absolute bottom-4 left-4 right-4 grid grid-cols-3 gap-2">
-          {[
-            ["Office", "NYC"],
-            ["Since", "2021"],
-            ["Reg.", "DE-LLC"],
-          ].map(([k, v]) => (
-            <div
-              key={k}
-              className="rounded-md border border-white/[0.06] bg-[#050816]/60 px-2 py-1.5"
-            >
-              <div className="font-mono text-[8px] uppercase tracking-[0.22em] text-[#64748B]">
-                {k}
-              </div>
-              <div className="font-mono text-[10px] text-[#E2E8F0]">{v}</div>
-            </div>
-          ))}
         </div>
 
         <div

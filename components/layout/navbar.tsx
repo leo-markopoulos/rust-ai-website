@@ -64,14 +64,16 @@ export function Navbar() {
                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
               </span>
               <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-emerald-300/90">
-                Systems Online
+                Open for clients
               </span>
             </div>
 
-            <Button variant="primary" size="sm" className="hidden md:inline-flex">
-              Schedule Consultation
-              <ArrowUpRight className="h-3.5 w-3.5" />
-            </Button>
+            <a href={site.contact.mailto} className="hidden md:inline-flex">
+              <Button variant="primary" size="sm">
+                Schedule Consultation
+                <ArrowUpRight className="h-3.5 w-3.5" />
+              </Button>
+            </a>
 
             <button
               type="button"
@@ -109,10 +111,12 @@ export function Navbar() {
                   </li>
                 ))}
               </ul>
-              <Button variant="primary" size="md" className="mt-3 w-full">
-                Schedule Consultation
-                <ArrowUpRight className="h-3.5 w-3.5" />
-              </Button>
+              <a href={site.contact.mailto} className="block mt-3" onClick={() => setOpen(false)}>
+                <Button variant="primary" size="md" className="w-full">
+                  Schedule Consultation
+                  <ArrowUpRight className="h-3.5 w-3.5" />
+                </Button>
+              </a>
             </div>
           </motion.div>
         )}

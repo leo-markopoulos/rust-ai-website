@@ -1,29 +1,25 @@
 export const site = {
-  name: "RustAI",
-  legalName: "RustAI LLC",
-  tagline: "Enterprise AI Infrastructure",
+  name: "Rust AI",
+  legalName: "Rust AI LLC",
+  tagline: "AI automation and software solutions",
   description:
-    "RustAI LLC develops advanced AI systems, autonomous workflows, predictive analytics platforms, and enterprise-grade automation infrastructure for modern organizations.",
+    "Rust AI is a newly founded AI company focused on building practical automation tools, intelligent workflows, and custom AI-powered solutions for businesses and creators.",
   founder: {
     name: "Leo Markopoulos",
-    title: "Founder & CEO",
-    roles: [
-      "AI Infrastructure Architect",
-      "Enterprise Automation Strategist",
-      "Systems & Quantitative Technology Specialist",
-    ],
-    bio: "Leo Markopoulos founded RustAI LLC with a focus on building enterprise-grade AI infrastructure, intelligent automation systems, and scalable analytics platforms designed for modern organizations and data-driven operations.",
+    title: "Founder",
+    roles: ["AI & Automation", "Software Development"],
+    bio: "Leo founded Rust AI in 2026 to build practical, accessible AI tools — workflow automation, custom integrations, and software solutions designed around real business problems rather than buzzwords.",
   },
   contact: {
-    email: "contact@rustai.io",
-    consultation: "https://rustai.io/consult",
+    email: "rustaienterprises@gmail.com",
+    mailto:
+      "mailto:rustaienterprises@gmail.com?subject=Consultation Request - Rust AI&body=Hi Rust AI,%0D%0A%0D%0AI would like to schedule a consultation.%0D%0A%0D%0AName:%0D%0ABusiness:%0D%0AWhat I need help with:%0D%0A",
   },
   nav: [
-    { label: "Solutions", href: "#solutions" },
-    { label: "Platform", href: "#platform" },
-    { label: "Infrastructure", href: "#infrastructure" },
-    { label: "Case Studies", href: "#case-studies" },
-    { label: "Leadership", href: "#leadership" },
+    { label: "Services", href: "#services" },
+    { label: "Approach", href: "#approach" },
+    { label: "About", href: "#about" },
+    { label: "Founder", href: "#founder" },
     { label: "Contact", href: "#contact" },
   ],
 } as const;

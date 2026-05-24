@@ -1,38 +1,35 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Lock, FileBadge, ShieldCheck, GitBranch } from "lucide-react";
 import { Section } from "@/components/ui/section";
 
-const integrations = [
-  { name: "AWS", glyph: "AWS" },
-  { name: "Azure", glyph: "AZ" },
+const tools = [
   { name: "OpenAI", glyph: "OAI" },
-  { name: "NVIDIA", glyph: "NV" },
-  { name: "Snowflake", glyph: "SNW" },
-  { name: "Databricks", glyph: "DBX" },
-  { name: "Kubernetes", glyph: "K8S" },
   { name: "Anthropic", glyph: "ANT" },
-];
-
-const badges = [
-  { icon: <ShieldCheck className="h-3.5 w-3.5" />, label: "SOC 2 Type II" },
-  { icon: <Lock className="h-3.5 w-3.5" />, label: "ISO 27001" },
-  { icon: <FileBadge className="h-3.5 w-3.5" />, label: "HIPAA Ready" },
-  { icon: <GitBranch className="h-3.5 w-3.5" />, label: "GDPR Compliant" },
+  { name: "Next.js", glyph: "NXT" },
+  { name: "Python", glyph: "PY" },
+  { name: "Node.js", glyph: "NODE" },
+  { name: "Postgres", glyph: "PG" },
+  { name: "n8n", glyph: "N8N" },
+  { name: "Zapier", glyph: "ZAP" },
 ];
 
 export function Trust() {
   return (
-    <Section id="trust" className="py-16 md:py-20">
+    <Section id="tools" className="py-16 md:py-20">
       <div className="text-center">
         <div className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#64748B]">
-          Trusted infrastructure · Enterprise-grade integrations
+          Tools &amp; technologies we build with
         </div>
+        <p className="mt-3 text-[13px] text-[#94A3B8] max-w-xl mx-auto">
+          We work with modern AI APIs, automation platforms, and open-source
+          frameworks — chosen for what fits the problem, not what sounds
+          impressive.
+        </p>
       </div>
 
       <div className="mt-10 grid grid-cols-4 md:grid-cols-8 gap-px rounded-xl border border-white/[0.06] bg-white/[0.05] overflow-hidden">
-        {integrations.map((it, i) => (
+        {tools.map((it, i) => (
           <motion.div
             key={it.name}
             initial={{ opacity: 0, y: 10 }}
@@ -54,20 +51,6 @@ export function Trust() {
               className="absolute inset-x-3 -bottom-px h-px scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 bg-gradient-to-r from-cyan-400/60 to-transparent"
             />
           </motion.div>
-        ))}
-      </div>
-
-      <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-        {badges.map((b) => (
-          <div
-            key={b.label}
-            className="inline-flex items-center gap-2 rounded-full border border-white/[0.06] bg-white/[0.02] px-3 py-1.5 backdrop-blur"
-          >
-            <span className="text-cyan-300">{b.icon}</span>
-            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#94A3B8]">
-              {b.label}
-            </span>
-          </div>
         ))}
       </div>
     </Section>

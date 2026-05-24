@@ -2,84 +2,72 @@
 
 import { motion } from "framer-motion";
 import {
-  Layers,
-  Zap,
-  Lock,
-  Network,
-  Server,
+  Hammer,
+  Eye,
+  Heart,
+  Compass,
   Sparkles,
-  GitBranch,
-  ScanLine,
+  Users,
 } from "lucide-react";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Badge } from "@/components/ui/badge";
 
 const pillars = [
   {
-    icon: Layers,
-    title: "Scalable Architecture",
-    body: "Horizontally scalable data and model planes engineered to absorb event volumes ranging from millions to billions per day without degradation.",
+    icon: Hammer,
+    title: "We build, not just pitch",
+    body: "We're an early-stage company that prefers shipping things to talking about things. Every engagement ends with something real you can use.",
   },
   {
-    icon: Zap,
-    title: "Low-Latency Systems",
-    body: "Sub-10ms p99 inference paths with co-located feature stores, batched scheduling, and adaptive routing for time-critical decisioning.",
+    icon: Eye,
+    title: "Honest about what we are",
+    body: "Rust AI was founded in 2026. We're new. We don't claim a portfolio we don't have — and we'd rather earn trust by delivering than by inflating it.",
   },
   {
-    icon: Lock,
-    title: "Enterprise-Grade Security",
-    body: "Hardened deployments with isolation boundaries, encryption-in-transit and at-rest, signed model artifacts, and tamper-evident audit trails.",
+    icon: Heart,
+    title: "Founder-led work",
+    body: "When you hire us, the person building your project is the person you talked to. No handoffs, no account managers, no surprises.",
   },
   {
-    icon: Network,
-    title: "AI Orchestration",
-    body: "A unified control plane for agents, models, and workflows — with policy guardrails, evaluation harnesses, and human-in-the-loop checkpoints.",
-  },
-  {
-    icon: Server,
-    title: "Resilient Infrastructure",
-    body: "Multi-region active-active topologies with automatic failover, drift detection, and self-healing pipelines tested against chaos scenarios.",
+    icon: Compass,
+    title: "Small projects welcome",
+    body: "We don't need huge contracts. A focused automation, a single AI feature, a small internal tool — these are exactly the kind of projects we're looking for.",
   },
   {
     icon: Sparkles,
-    title: "Intelligent Automation",
-    body: "Long-running autonomous workflows that reason, act, and report — closing the loop between perception, decision, and execution end-to-end.",
+    title: "Practical over impressive",
+    body: "We pick tools that fit the problem, not the ones that sound good in a deck. The goal is something useful — not a tech showcase you can't maintain.",
   },
   {
-    icon: GitBranch,
-    title: "Deployment Pipelines",
-    body: "Declarative deployment surfaces with canary releases, shadow models, automated rollback, and continuous evaluation against production traffic.",
-  },
-  {
-    icon: ScanLine,
-    title: "Observability by Default",
-    body: "First-class instrumentation across inference, agents, and data — exposing token-level traces, drift indicators, and cost telemetry in real time.",
+    icon: Users,
+    title: "Pilot-friendly pricing",
+    body: "As an early-stage startup we're open to pilot projects, fixed-scope work, and partnerships that grow over time. Tell us what you're working with.",
   },
 ];
 
 export function Why() {
   return (
-    <Section id="infrastructure" className="relative">
+    <Section id="why" className="relative">
       <SectionHeader
-        eyebrow={<Badge variant="cyan">Why RustAI · Infrastructure Principles</Badge>}
+        eyebrow={<Badge variant="cyan">Why Rust AI</Badge>}
         title={
           <>
-            Long-term systems thinking
+            An honest start
             <br />
-            <span className="text-gradient-cyan">over short-term shortcuts.</span>
+            <span className="text-gradient-cyan">to a long-term partner.</span>
           </>
         }
-        description="RustAI is operated as a founder-led engineering organization. Every system we ship is designed to be observable, recoverable, and accountable — the way production infrastructure is supposed to be."
+        description="Rust AI is a new company. That's a feature, not a flaw — it means we have time for your project, real motivation to do it well, and no legacy baggage to work around."
       />
 
-      <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px rounded-xl border border-white/[0.06] bg-white/[0.05] overflow-hidden">
+      <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px rounded-xl border border-white/[0.06] bg-white/[0.05] overflow-hidden">
         {pillars.map((p, i) => (
           <motion.div
             key={p.title}
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10%" }}
-            transition={{ duration: 0.5, delay: (i % 4) * 0.05 }}
+            transition={{ duration: 0.5, delay: (i % 3) * 0.05 }}
             className="group relative bg-[#0B1120] p-6 hover:bg-[#0F172A] transition-colors duration-300"
           >
             <div className="flex h-9 w-9 items-center justify-center rounded-md border border-white/[0.06] bg-white/[0.03] text-cyan-300 group-hover:border-cyan-400/30 group-hover:bg-cyan-400/[0.06] transition-all">

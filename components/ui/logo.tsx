@@ -29,10 +29,10 @@ export function Logo({ className }: { className?: string }) {
       </div>
       <div className="flex flex-col leading-none">
         <span className="font-display text-[15px] font-semibold tracking-tight text-[#E2E8F0]">
-          RustAI<span className="text-cyan-400">.</span>
+          Rust AI<span className="text-cyan-400">.</span>
         </span>
         <span className="font-mono text-[9px] uppercase tracking-[0.22em] text-[#64748B] mt-0.5">
-          LLC · Infrastructure
+          AI &middot; Automation
         </span>
       </div>
     </div>
